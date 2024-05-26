@@ -1,0 +1,76 @@
+.skills {
+  max-width: 1310px;
+  padding: 20px;
+  margin: 20px auto;
+
+  background-color: #140C1C;
+  
+}
+.skills h1 {
+  text-align: center;
+  font-weight: bolder;
+  /* font-size: 40px; */
+
+  background: linear-gradient(to right, #5f13f7, aliceblue);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+}
+.mySkills {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  max-width: 1310px;
+  padding: 20px;
+  margin: auto;
+}
+.skill {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    padding: 1rem 3rem;
+    font-size: 8rem;
+    border-radius: 20px;
+
+    background: linear-gradient(267deg, rgba(63, 34, 120, 0.5), rgba(175, 137, 250, 0.5));
+    transition: all 0.5s ease 0ms;
+
+}
+
+.skill:hover{
+    transform: translateY(-5px);
+    cursor: pointer;
+    background: transparent;
+    color: #5f13f7;
+    border: 2px solid #5f13f7;
+}
+.percentage{
+    font-size: 22px;
+    font-weight: bold;
+}
+.skillName{
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* --------NOW TIME FOR RESPONSIVENESS------- */
+@media (max-width: 630px){
+    .mySkills{
+        gap: 10px;
+    }
+    .skill{
+        padding: 1rem 5rem;
+    }
+}
+@media (min-width: 630px) and (max-width: 1080px){
+    .mySkills{
+        gap: 15px;
+        justify-content: center;
+        align-items: center;
+    }
+    /* .skill{
+        padding: 1rem 5rem;
+    } */
+}

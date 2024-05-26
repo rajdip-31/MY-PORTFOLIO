@@ -1,0 +1,154 @@
+.works{
+    max-width: 1310px;
+    display: flex;
+    margin: 6rem auto;
+}
+.myProject{
+    width: 50%;
+    margin: 0 1rem;
+}
+.project-title{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+    padding: 2rem 0;
+}
+.project-title h1{
+    font-weight: bold;
+    background: linear-gradient(to right,#8045f8,aliceblue);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+}
+.project-title i{
+    font-size: 41px;
+    background: linear-gradient(to right,#8045f8,aliceblue);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+}
+.project, .education{
+    padding: 2rem 1.5rem;
+    margin: 1.2rem 0;
+    background-color: #140C1C;
+    border-radius: 20px;
+
+    transition: all 0.5s ease 0ms;
+}
+.projects a{
+    text-decoration: none;
+}
+
+.myEducation{
+    width: 50%;
+    margin: 0 1rem;
+
+}
+.education-title{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+    padding: 2rem 0;
+}
+.education-title h1{
+    font-weight: bold;
+    background: linear-gradient(to right,#8045f8,aliceblue);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+}
+.education-title i{
+    font-size: 41px;
+    background: linear-gradient(to right,#8045f8,aliceblue);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+}
+
+.education:hover{
+    cursor: pointer;
+    background: transparent;
+    border: 2px solid #36006b;
+    transform: translateY(-5px);
+}
+.project:hover{
+    cursor: pointer;
+    background: transparent;
+    border: 2px solid #36006b;
+    transform: translateY(-5px);
+}
+.duration{
+    color: #8750F7;
+    padding: 2px 0;
+    font-size: 20px;
+    font-weight: bolder;
+}
+.projectName{
+    padding: 2px 0;
+    font-size: 23px;
+    font-weight: bolder;
+    color: aliceblue;
+}
+.technology, .degree{
+   font-size: 16px;
+   font-weight: bold;
+   color: aliceblue;
+}
+
+@media (max-width:630px){
+    .works{
+        width: 100vw;
+        flex-wrap: wrap;
+    }
+    .myProject, .myEducation{
+        width: 100vw;
+        margin: auto;
+    }
+    .project-title{
+        width: 100vw;
+        justify-content: center;
+    }
+    .education-title{
+        width: 100vw;
+        justify-content: center;
+    }
+    .project, .education{
+        width: 100vw;
+        padding: 2rem 1.8rem;
+    }
+
+    .projectName{
+        font-size: 21px;
+    }
+}
+@media (min-width:630px) and (max-width:1080px){
+    .works{
+        width: 100vw;
+        flex-wrap: wrap;
+    }
+    .myProject, .myEducation{
+        width: 100vw;
+        margin: auto;
+    }
+    .project-title{
+        width: 100vw;
+        justify-content: center;
+    }
+    .education-title{
+        width: 100vw;
+        justify-content: center;
+    }
+    .project, .education{
+        width: 100vw;
+        padding: 1.5rem  2.5rem;
+    }
+
+    .projectName{
+        font-size: 21px;
+    }
+}
+
