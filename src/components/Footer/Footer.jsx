@@ -2,12 +2,14 @@ import React from 'react'
 import './Footer.css'
 import logo from '../../images/logo.png'
 
+import {NavLink} from 'react-router-dom'
+
 
 const Footer = () => {
   return (
     <div>
       <div className="footer">
-        <img src={logo} alt="" className='logo'/>
+      <NavLink to="/"><img className= "logo" src={logo} alt="logo" /></NavLink>
         <div className="footer-links">
             <a href="#home">HOME</a>
             <a href="#about">ABOUT</a>

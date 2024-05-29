@@ -3,6 +3,7 @@ import './Navbar.css'
 import logo from '../../images/logo.png'
 import menu_open from '../../images/HamBurger.png'
 import menu_close from '../../assets/menu_close.svg'
+import {NavLink} from 'react-router-dom'
 
 
 const Navbar = () => {
@@ -75,26 +76,27 @@ window.onload = calcScrollValue;
   
 
   return (
-    <>
+  <>
     <div id="progress">
     <span id="progress-value"><i className='bx bx-up-arrow-alt'></i></span>
     </div>
+   
     <div className='navbar navbar-inverse'  data-spy="affix" data-offset-top="197">
-      <img className= "logo" src={logo} alt="logo" />
+      <NavLink to="/"><img className= "logo" src={logo} alt="logo" /></NavLink>
       <img src={menu_open} alt="menu burger" className='nav-mob-open' onClick={openMenu}/>
       <ul className='nav-menu' ref = {menuRef}>
         <img src={menu_close} className='nav-mob-close' alt="" onClick={closeMenu} />
-        <li><a onClick={closeMenu} href="#home">HOME</a></li>
-        <li><a onClick={closeMenu} href="#about">ABOUT</a></li>
-        <li><a onClick={closeMenu} href="#skills">SKILLS</a></li>
-        <li><a onClick={closeMenu} href="#works">WORKS</a></li>
-        <li><a onClick={closeMenu} href="#education">EDUCATION</a></li>
-        <li><a onClick={closeMenu} href="#contact">CONTACT</a></li>
+        <NavLink style={{ textDecoration: 'none' }} to={"/"}><li onClick={closeMenu}>HOME</li></NavLink>
+        <NavLink style={{ textDecoration: 'none' }} to={"/Hero"}><li onClick={closeMenu}>ABOUT</li></NavLink>
+        <NavLink style={{ textDecoration: 'none' }} to = {"/Skills"}><li onClick={closeMenu}>SKILLS</li></NavLink>
+        <NavLink style={{ textDecoration: 'none' }} to = {"/Work"}><li onClick={closeMenu}>WORKS</li></NavLink>
+        <NavLink style={{ textDecoration: 'none' }} to = {"/Work"}><li onClick={closeMenu}>EDUCATION</li></NavLink>
+        <NavLink style={{ textDecoration: 'none' }} to = {"/Contact"}><li onClick={closeMenu}>CONTACT</li></NavLink>
         <li><a onClick={changeBackground}>{btnText}</a></li>
       </ul>
       <div id='mode'>SIGN IN</div>
     </div>
-    </>
+  </>
   )
 }
 
