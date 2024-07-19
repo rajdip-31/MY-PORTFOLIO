@@ -6,9 +6,11 @@
     justify-content: space-around ;
 }
 .hero img{
+    width: 1005;
     margin: 180px 0;
-    box-shadow: #5f13f7 0px 2px 8px 0px;
+    box-shadow: #5505f6 0px 2px 8px 0px;
     transition: all 0.2s ease;
+    border-radius: 50PX;
 }
 .hero img:hover{
     cursor: pointer;
@@ -157,9 +159,10 @@
 @media(max-width:630px){
     .hero{
         flex-direction: column;
+        padding: 16px;
     }
     .hero img{
-        margin: 6rem auto;
+        border-radius: 50%;        
     }
     .hero .content{
         display: flex;

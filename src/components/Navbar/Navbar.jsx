@@ -94,7 +94,7 @@ window.onload = calcScrollValue;
         <NavLink style={{ textDecoration: 'none' }} to = {"/Contact"}><li onClick={closeMenu}>CONTACT</li></NavLink>
         <li><a onClick={changeBackground}>{btnText}</a></li>
       </ul>
-      <div id='mode'>SIGN IN</div>
+      <div id='mode'>CONTACT</div>
     </div>
   </>
   )

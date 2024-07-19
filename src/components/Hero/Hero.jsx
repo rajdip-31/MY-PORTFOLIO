@@ -1,9 +1,9 @@
-import React, { useState } from 'react'
-import './Hero.css';
-import profile_photo from '../../images/2.png'
-import resume from '../../images/CV.pdf'
+import React, { useState } from 'react';
 import CountUp from 'react-countup';
 import ScrollTrigger from 'react-scroll-trigger';
+import profile_photo from '../../images/2.png';
+import resume from '../../images/CV.pdf';
+import './Hero.css';
 
 
 const Hero = () => {
@@ -29,7 +29,7 @@ const Hero = () => {
         <div className="social-media">
           <a href="https://www.facebook.com/profile.php?id=100084533560758" target='blank'><i className='bx bxl-facebook-circle'></i></a>
           <a href="https://www.instagram.com/irajdip__pramanik/" target='blank'><i className='bx bxl-instagram-alt'></i></a> 
-          <a href="https://twitter.com/FROZZEN_31" target='blank'><i className='bx bxl-twitter'></i></a>
+          <a href="https://x.com/frozzencode" target='blank'><i className='bx bxl-twitter'></i></a>
           <a href="https://www.linkedin.com/in/rajdip-pramanik/" target='blank'><i className='bx bxl-linkedin-square' ></i></a>
           <a href="https://github.com/rajdip-31" target='blank'><i className='bx bxl-github' ></i></a>
         </div>
