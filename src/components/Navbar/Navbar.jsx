@@ -17,37 +17,6 @@ const Navbar = () => {
   }
 
 
-
-  // -----Change Mode-----
-    const [myStyle, setMyStyle] = useState({
-      color: "aliceblue",
-      backgroundColor: "#0F0715" // Corrected property name
-    });
-  
-    const [btnText, setBtnText] = useState("DARK MODE");
-  
-    // Function for changing Background color
-    const changeBackground = () => {
-      if (myStyle.backgroundColor === "#0F0715") {
-        setMyStyle({
-          color: "aliceblue",
-          backgroundColor: "lightblue"
-        });
-        setBtnText("LIGHT MODE");
-      } else {
-        setMyStyle({
-          color: "aliceblue",
-          backgroundColor: "#0F0715"
-        });
-        setBtnText("DARK MODE");
-      }
-    };
-  
-    // Apply the styles to the document body
-    document.body.style.color = myStyle.color;
-    document.body.style.backgroundColor = myStyle.backgroundColor;
-
-
 //scroll up--------
 let calcScrollValue = () => {
 
@@ -92,7 +61,6 @@ window.onload = calcScrollValue;
         <NavLink style={{ textDecoration: 'none' }} to = {"/Work"}><li onClick={closeMenu}>WORKS</li></NavLink>
         <NavLink style={{ textDecoration: 'none' }} to = {"/Work"}><li onClick={closeMenu}>EDUCATION</li></NavLink>
         <NavLink style={{ textDecoration: 'none' }} to = {"/Contact"}><li onClick={closeMenu}>CONTACT</li></NavLink>
-        <li><a onClick={changeBackground}>{btnText}</a></li>
       </ul>
       <div id='mode'>CONTACT</div>
     </div>

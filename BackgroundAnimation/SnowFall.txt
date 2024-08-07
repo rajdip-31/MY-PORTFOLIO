@@ -1,0 +1,96 @@
+import Particles, { initParticlesEngine } from "@tsparticles/react";
+import { useEffect, useMemo, useState } from "react";
+import { loadSlim } from "@tsparticles/slim";
+
+const ParticlesComponent = (props) => {
+  const [init, setInit] = useState(false);
+
+  useEffect(() => {
+    initParticlesEngine(async (engine) => {
+      await loadSlim(engine);
+    }).then(() => {
+      setInit(true);
+    });
+  }, []);
+
+  const particlesLoaded = (container) => {
+    console.log(container);
+  };
+
+  const options = useMemo(
+    () => ({
+      background: {
+        color: {
+          value: "#0f0715", // Dark background color
+        },
+      },
+      fpsLimit: 120,
+      interactivity: {
+        events: {
+          onClick: {
+            enable: false, // Disable interaction on click
+          },
+          onHover: {
+            enable: true, // Enable interaction on hover
+            mode: "repulse", // Use repulse mode on hover
+          },
+          onResize: {
+            enable: true,
+            density_auto: true,
+          },
+        },
+        modes: {
+          repulse: {
+            distance: 100, // Distance of repulsion effect
+            duration: 0.4, // Duration of repulsion effect
+          },
+        },
+      },
+      particles: {
+        color: {
+          value: "#FFFFFF", // Snowflakes are white
+        },
+        links: {
+          enable: false, // No lines between snowflakes
+        },
+        move: {
+          direction: "bottom", // Snowflakes fall down
+          enable: true,
+          outModes: {
+            default: "out", // Snowflakes disappear at the bottom
+          },
+          random: false,
+          speed: 1, // Speed of falling
+          straight: false,
+          attract: {
+            enable: true, // Snowflakes slightly attracted to mouse position
+            rotateX: 600,
+            rotateY: 1200,
+          },
+        },
+        number: {
+          density: {
+            enable: true,
+            value_area: 800, // Adjust density as needed
+          },
+          value: 100, // Number of snowflakes
+        },
+        opacity: {
+          value: 0.6, // Slightly transparent snowflakes
+        },
+        shape: {
+          type: "circle", // Snowflakes are circular
+        },
+        size: {
+          value: { min: 2, max: 5 }, // Size of snowflakes
+        },
+      },
+      detectRetina: true,
+    }),
+    []
+  );
+
+  return <Particles id={props.id} init={particlesLoaded} options={options} />;
+};
+
+export default ParticlesComponent;

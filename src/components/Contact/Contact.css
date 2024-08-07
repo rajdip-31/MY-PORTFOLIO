@@ -4,6 +4,7 @@
   display: flex;
   gap: 2rem;
 }
+
 .contact-form {
   width: 50%;
   display: flex;
@@ -12,6 +13,9 @@
   background-color: #140c1c;
   border-radius: 20px;
   padding: 2rem;
+}
+.contact-form:hover{
+  background: transparent;
 }
 
 .contact-form input,
@@ -79,6 +83,9 @@ textarea {
   width: 50%;
   background-color: #140c1c;
   padding: 3rem;
+}
+.contact-info:hover{
+  background: transparent;
 }
 .contact-info p a{
     color: aliceblue;

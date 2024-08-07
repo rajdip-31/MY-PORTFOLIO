@@ -10,6 +10,9 @@
     padding: 40px;
     
 }
+.footer:hover{
+    background: transparent;
+  }
 .footer-links{
     display: flex;
     justify-content: space-evenly;

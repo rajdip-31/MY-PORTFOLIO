@@ -7,6 +7,7 @@ import Work from "./components/Work/Work.jsx";
 import Contact from "./components/Contact/Contact.jsx";
 import Footer from "./components/Footer/Footer.jsx";
 import Home from "./Home.jsx"
+import ParticlesComponent from './components/Particles/Particles.jsx'
 
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
@@ -14,6 +15,7 @@ const App = () => {
   return (
 
     <BrowserRouter>
+    <ParticlesComponent id="particles"/>
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />}></Route>
