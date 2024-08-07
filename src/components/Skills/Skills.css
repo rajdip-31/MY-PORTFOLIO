@@ -19,6 +19,7 @@
 .mySkills {
   display: flex;
   justify-content: space-evenly;
+  gap: 1rem;
   flex-wrap: wrap;
   max-width: 1310px;
   padding: 20px;

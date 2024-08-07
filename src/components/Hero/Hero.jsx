@@ -19,7 +19,7 @@ const Hero = () => {
       <div className="hero" id='home'>
         <img src={profile_photo} alt="profile photo" />
         <div className="content" id='about'>
-        <span>I'm Rajdip</span>
+        <span >I'm Rajdip</span>
         <h1>Web Developer And <br /> Competitive Programmer</h1>
         <p>Hello! I'm a web developer with a passion for coding and a keen interest in competitive programming. Explore my portfolio to see my projects and accomplishments in the world of web development and beyond.</p>
         <div className="hero-action">
